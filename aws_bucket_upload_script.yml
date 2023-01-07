@@ -1,0 +1,12 @@
+---
+    - name: Upload a file to S3
+      hosts: localhost
+      tasks:
+      - name: Upload file to S3
+        aws_s3:
+          bucket: yourbuckethere
+          object: readme.txt
+          src: readme.txt
+          region: us-east-1
+          mode: put
+    
